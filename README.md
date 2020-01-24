@@ -1,6 +1,8 @@
 # vector-fun
 Playing around with the Anki Vector robot
 
+Built with the [Official Vector SDK](https://github.com/anki/vector-python-sdk)
+
 
 # Installation
 1. Set up your Vector
@@ -9,12 +11,15 @@ Playing around with the Anki Vector robot
 1. Create a Python3 Virtual Environment
 
     `python3 -m venv venv`
+    
 1. Activate the Virtual Environment
     
     `source venv/bin/activate`
+    
 1. Install the requirements
     
     `pip install -r requirements.txt`
+    
 1. Run the Anki Vector setup tool
     
     `python -m anki_vector.configure`
