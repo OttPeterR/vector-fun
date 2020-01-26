@@ -30,7 +30,7 @@ def main():
                            show_viewer=False,
                            show_3d_viewer=True,
                            enable_face_detection=False,
-                           enable_custom_object_detection=True,
+                           enable_custom_object_detection=False,
                            enable_nav_map_feed=True):
         print("Starting 3D Viewer. Use Ctrl+C to quit.")
         try:
