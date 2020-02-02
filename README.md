@@ -20,6 +20,10 @@ Built with the [Official Vector SDK](https://github.com/anki/vector-python-sdk)
     
     `pip install -r requirements.txt`
     
+1. Install 3D Viewer requirements
+
+    `pip3 install "anki_vector[3dviewer]"`
+    
 1. Run the Anki Vector setup tool
     
     `python -m anki_vector.configure`
