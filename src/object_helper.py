@@ -3,8 +3,6 @@ from anki_vector.objects import CustomObjectMarkers, CustomObjectTypes
 
 all_funcs = []
 
-
-
 def make_bluetooth_speaker(robot):
     obj = robot.world.define_custom_box(custom_object_type=CustomObjectTypes.CustomType00,
         marker_front=CustomObjectMarkers.Triangles2,  # front
@@ -38,25 +36,25 @@ all_funcs.append(make_bluetooth_speaker)
 #     return obj
 # all_funcs.append(make_fake_cube)
 
-def make_dremmel_wall(robot):
+def make_dremmel_container_wall(robot):
     obj = robot.world.define_custom_wall(custom_object_type=CustomObjectTypes.CustomType02,
         marker=CustomObjectMarkers.Hexagons3,
         width_mm=290,
         height_mm=85,
-        marker_width_mm=20,
-        marker_height_mm=20,
+        marker_width_mm=50,
+        marker_height_mm=50,
         is_unique=True)
     return obj
-all_funcs.append(make_dremmel_wall)
+all_funcs.append(make_dremmel_container_wall)
 
 
 def make_macbook_wall(robot):
     obj = robot.world.define_custom_wall(custom_object_type=CustomObjectTypes.CustomType03,
         marker=CustomObjectMarkers.Triangles3,
-        width_mm=310,
+        width_mm=450,
         height_mm=100,
-        marker_width_mm=20,
-        marker_height_mm=20,
+        marker_width_mm=50,
+        marker_height_mm=50,
         is_unique=True)
     return obj
 all_funcs.append(make_macbook_wall)
@@ -67,8 +65,8 @@ def make_cardboard_wall_00(robot):
         marker=CustomObjectMarkers.Circles5,
         width_mm=260,
         height_mm=135,
-        marker_width_mm=20,
-        marker_height_mm=20,
+        marker_width_mm=50,
+        marker_height_mm=50,
         is_unique=True)
     return obj
 all_funcs.append(make_cardboard_wall_00)
@@ -78,11 +76,33 @@ def make_cardboard_wall_01(robot):
         marker=CustomObjectMarkers.Triangles5,
         width_mm=260,
         height_mm=135,
-        marker_width_mm=20,
-        marker_height_mm=20,
+        marker_width_mm=50,
+        marker_height_mm=50,
         is_unique=True)
     return obj
 all_funcs.append(make_cardboard_wall_01)
+
+# def make_cardboard_wall_10(robot):
+#     obj = robot.world.define_custom_wall(custom_object_type=CustomObjectTypes.CustomType06,
+#         marker=CustomObjectMarkers.Circles4,
+#         width_mm=260,
+#         height_mm=135,
+#         marker_width_mm=50,
+#         marker_height_mm=50,
+#         is_unique=True)
+#     return obj
+# all_funcs.append(make_cardboard_wall_10)
+
+# def make_cardboard_wall_11(robot):
+#     obj = robot.world.define_custom_wall(custom_object_type=CustomObjectTypes.CustomType07,
+#         marker=CustomObjectMarkers.Triangles4,
+#         width_mm=260,
+#         height_mm=135,
+#         marker_width_mm=50,
+#         marker_height_mm=50,
+#         is_unique=True)
+#     return obj
+# all_funcs.append(make_cardboard_wall_11)
 
 
 def create_all_objects(robot):
