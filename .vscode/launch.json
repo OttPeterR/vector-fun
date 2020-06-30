@@ -4,11 +4,26 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "name": "Demo Controller",
+            "type": "python",
+            "request": "launch",
+            "program": "./src/demos/controller.py",
+            "console": "integratedTerminal"
+        },
         {
             "name": "Web Controller",
             "type": "python",
             "request": "launch",
-            "program": "./src/demos/controller.py",
+            "program": "./src/web_controller.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Custom Object Tester",
+            "type": "python",
+            "request": "launch",
+            "program": "./src/custom_obj_tester.py",
             "console": "integratedTerminal"
         }
     ]
