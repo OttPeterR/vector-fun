@@ -252,15 +252,6 @@ class RemoteControlVector:
                 update_head = False
         return update_head
 
-    def update_actions_state(self, key_code, is_key_down, speed_changed):
-        """Call custom functions"""
-        do_action = True
-        if key_code == ord('C'):
-            self.vector.behavior.drive_on_charger()
-        else:
-            do_action = False
-        return do_action
-
     def handle_key(self, key_code, is_shift_down, is_alt_down, is_key_down):
         """Called on any key press or release
            Holding a key down may result in repeated handle_key calls with is_key_down==True
@@ -280,8 +271,6 @@ class RemoteControlVector:
         update_lift = self.update_lift_state(key_code, is_key_down, speed_changed)
 
         update_head = self.update_head_state(key_code, is_key_down, speed_changed)
-
-        update_actions = self.update_actions_state(key_code, is_key_down, speed_changed)
 
         # Update driving, head and lift as appropriate
         if update_driving:
@@ -822,7 +811,7 @@ def run():
         flask_app.display_debug_annotations = DebugAnnotations.ENABLED_ALL.value
 
         robot.camera.init_camera_feed()
-        # robot.behavior.drive_off_charger()
+        zrobot.behavior.drive_off_charger()
         robot.camera.image_annotator.add_annotator('robotState', RobotStateDisplay)
 
         flask_helpers.run_flask(flask_app)
