@@ -3,7 +3,7 @@ import time
 import anki_vector
 from anki_vector.objects import CustomObjectMarkers, CustomObjectTypes
 
-import object_helper
+from vector_fun.objects import object_helper
 
 def main():
     args = anki_vector.util.parse_command_args()
